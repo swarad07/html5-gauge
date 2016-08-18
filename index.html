@@ -15,7 +15,22 @@
 </head>
 <body>
         <div id="example" class="k-content">
-
+<div class="number" style="
+    position: absolute;
+    top: 10em;
+    width: 53px;
+    /* height: 40px; */
+    border: 1px solid;
+    text-align: center;
+    display: table-cell;
+    /* vertical-align: middle; */
+    border-radius: 48px;
+    background: blue;
+    color: white;
+    left: 11em;
+    z-index: 99;
+    padding: 17px 0;
+">65</div>
             <div id="gauge-container">
                 <div id="gauge"></div>
             </div>
@@ -61,27 +76,28 @@
                         },
 
                         scale: {
-                            minorUnit: 5,
-                            startAngle: -30,
-                            endAngle: 210,
-                            max: 180,
+                            minorUnit: 2,
+                            startAngle: -45,
+                            endAngle: 225,
+                            max: 100,
                             labels: {
-                                position: labelPosition || "inside"
+                                position: labelPosition || "outside"
                             },
                             ranges: [
                                 {
-                                    from: 80,
-                                    to: 120,
+                                    from: 0,
+                                    to: 30,
                                     color: "#ffc700"
-                                }, {
-                                    from: 120,
-                                    to: 150,
-                                    color: "#ff7a00"
-                                }, {
-                                    from: 150,
-                                    to: 180,
-                                    color: "#c20000"
-                                }
+                                }, 
+                                // {
+                                //     from: 120,
+                                //     to: 150,
+                                //     color: "#ff7a00"
+                                // }, {
+                                //     from: 150,
+                                //     to: 180,
+                                //     color: "#c20000"
+                                // }
                             ]
                         }
                     });
@@ -118,7 +134,7 @@
 
             <style>
                 #gauge-container {
-                    background: transparent url("../content/dataviz/gauge/gauge-container.png") no-repeat 50% 50%;
+                    /*background: transparent url("../content/dataviz/gauge/gauge-container.png") no-repeat 50% 50%;*/
                     width: 404px;
                     height: 404px;
                     text-align: center;
